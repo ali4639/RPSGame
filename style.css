@@ -1,0 +1,208 @@
+/*///////////////////////////////////////////////////////*/
+/*
+
+PROJECT NAME :  ROCK,PAPER ANS SCISSORS GAME (RPS GAME)
+DEVELOPER    :  ALI AZARBAN
+YEAR         :  2024/07/28
+TELEGRAM ID  :  @AZARBAN71
+INSTAGRAM ID :  @AZARBAN.IR
+EMAIL        :  AZARBAN4639@GMAiL.COM
+
+*/
+/*///////////////////////////////////////////////////////*/
+
+@font-face {
+    font-family: "vazir";
+    src: url("fonts/vazir.eot");
+    src: url("fonts/vazir.ttf") format("truetype");
+    src: url("fonts/vazir.woff") format("woff");
+    src: url("fonts/vazir.woff2") format("woff2");
+}
+html,body{
+    margin:0;
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+*{
+    font-family: vazir;
+    direction: rtl;
+}
+body{
+    background-color: #c1c1c1;
+}
+.container{
+    position: absolute;
+}
+.gameContainer{
+    width: 428px;
+    height: 247px;
+    background-color: gainsboro;
+    padding: 50px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 0 63px #000 inset;
+    border: 7px solid #575757;
+}
+.gamerHand{
+    width: 269px;
+    height: 147px;
+    position: absolute;
+    top: 120px;
+    left: -276px;
+    overflow: hidden;
+    background: url('img/r-1.png') no-repeat;
+}
+.machineHand{
+    width: 269px;
+    height: 147px;
+    position: absolute;
+    top: 109px;
+    left: 543px;
+    overflow: hidden;
+    background: url('img/p-2.png') no-repeat;
+}
+.selection{
+    position: absolute;
+    top: 90px;
+    left: -67px;
+    padding: 9px;
+    background: #575757;
+    border-radius: 20px 0 0 20px;
+}
+.rock,.scissors,.paper{
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border-radius: 100%;
+    margin-bottom: 5px;
+    box-shadow: 0 0 20px #000 inset;
+}
+.rock:hover,.scissors:hover,.paper:hover{
+    box-shadow: 0 0 0 #000 inset;
+    cursor: pointer;
+}
+.rock{
+    background: url('img/rBtn.png') no-repeat;
+}
+.scissors{
+    background: url('img/sBtn.png') no-repeat;
+}
+.paper{
+    background: url('img/pBtn.png') no-repeat;
+}
+/*//////////////////////////////////////////////*/
+.rockSelected{
+    background: url('img/r-1.png') no-repeat;
+}
+.paperSelected{
+    background: url('img/p-1.png') no-repeat;
+}
+.scissorsSelected{
+    background: url('img/s-1.png') no-repeat;
+}
+/*/////////////////////////////////////////////*/
+.machineRock{
+    background: url('img/r-2.png') no-repeat;
+}
+.machinePaper{
+    background: url('img/p-2.png') no-repeat;
+}
+.machineScissors{
+    background: url('img/s-2.png') no-repeat; 
+}
+/*/////////////////////////////////////////////*/
+.cover{
+    width: 100%;
+    background-color: #0f0f0fc9;
+    height: 45%;
+    position: absolute;
+    top: 236px;
+    left: 0;
+    z-index: 2;
+    display: none;
+}
+.msg{
+    font-size: 20px;
+    direction: rtl;
+    text-align: center;
+    padding: 16px 0 0 0;
+    text-shadow: -2px -2px 2px #000;
+}
+.loserMsg{
+    color: #fb2b2b;
+}
+.winnerMsg{
+    color: #2acc09;
+}
+.inconclusiveMsg{
+    color: #fbdf2b;
+}
+.restart{
+    background-color: #dbdbdb;
+    padding: 4px 15px;
+    display: inline-block;
+    border: 2px solid #ddd;
+    border-radius: 50px;
+    position: relative;
+    top: 0;
+    left: -210px;
+    margin-top: 10px;
+    box-shadow: 0 0 5px #000 inset;
+    cursor: pointer;
+}
+.restart:hover{
+    background-color: #fba12b;
+}
+.scores{
+    background-color: #575757;
+    margin-top: 0;
+    padding: 5px;
+    border-radius: 20px;
+}
+.you{
+    margin-right: 15px;
+    color: #fff;
+    text-shadow: -2px -2px 2px #000;
+}
+.system{
+    margin-right: 25px;
+    color:#fff;
+    text-shadow: -2px -2px 2px #000;
+}
+.yourScore{
+    color:#ffb507;
+    font-weight: bolder;
+    text-shadow: -2px -2px 2px #000;
+}
+.systemScore{
+    color:#fb2b2b;
+    font-weight: bolder;
+    text-shadow: -2px -2px 2px #000;
+}
+.newGame{
+    background-color: #1a1919de;
+    color: #fff;
+    text-shadow: -2px -2px 2px #000;
+    padding: 2px 15px;
+    border-radius: 100px;
+    font-size: 13px;
+    margin-right: 40px;
+    cursor: pointer;
+}
+.newGame:hover{
+    background-color: #b90404de;
+    box-shadow: 0 0 5px #000 inset;
+}
+.gameTitle{
+    font-size: 25px;
+    position: relative;
+    top: -226px;
+    font-weight: bolder;
+    word-spacing: -5px;
+}
+/*/////////////////////////////////////////////*/
